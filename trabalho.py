@@ -4,6 +4,7 @@ import os
 
 api_key = os.environ.get("API_KEY")
 
+
 def get_noticias(api_key, query):
     url = f"https://newsapi.org/v2/everything?q={query}&pageSize=5&sortBy=publishedAt&apiKey={api_key}"
     response = requests.get(url)
